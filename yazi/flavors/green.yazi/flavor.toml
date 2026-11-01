@@ -1,0 +1,189 @@
+# Color palette: Cabin in the Woods & Turquoise Lake (High Contrast Selection)
+# ---
+# bg          = "transparent" (Herda a transparência do terminal)
+# lake-100    = "#38b2ac" (Ciano do lago - destaque principal)
+# lake-200    = "#5cdbda" (Ciano claro - texto ativo/links)
+# forest-300  = "#8fbfa0" (Verde névoa - texto padrão)
+# forest-500  = "#2b7a78" (Verde médio - ícones/secundário)
+# forest-700  = "#15301b" (Verde escuro - bordas e elementos apagados)
+# cabin-900   = "#080c0a" (Verde profundo - seleções e destaques sutis)
+
+[app]
+overall = { }
+
+[mgr]
+cwd = { fg = "#38b2ac", bold = true }
+
+# Find
+find_keyword = { fg = "#38b2ac", reversed = true }
+find_position = { fg = "#5cdbda", bold = true, italic = true }
+
+# Marker
+marker_copied = { fg = "#5cdbda", bg = "#5cdbda" }
+marker_cut = { fg = "#15301b", bg = "#15301b" }
+marker_marked = { fg = "#2b7a78", bg = "#2b7a78" }
+marker_selected = { fg = "#38b2ac", bg = "#38b2ac" }
+
+# Count
+count_copied = { fg = "#5cdbda", bold = true, reversed = true }
+count_cut = { fg = "#15301b", bold = true, reversed = true }
+count_selected = { fg = "#38b2ac", bold = true, reversed = true }
+
+# Border
+border_symbol = "│"
+border_style = { fg = "#2b7a78" }
+
+[indicator]
+parent = { underline = true }
+# Aumentado o contraste do item atual/selecionado com fundo ciano sólido e texto escuro
+current = { fg = "#080c0a", bg = "#38b2ac", bold = true }
+preview = { underline = true }
+padding = { open = "█", close = "█" }
+
+[tabs]
+active = { fg = "#080c0a", bg = "#38b2ac", bold = true }
+inactive = { fg = "#2b7a78" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[mode]
+# Normal mode
+normal_main = { fg = "#080c0a", bg = "#38b2ac", bold = true }
+normal_alt = { fg = "#8fbfa0" }
+
+# Select mode
+select_main = { fg = "#080c0a", bg = "#5cdbda", bold = true }
+select_alt = { fg = "#5cdbda" }
+
+# Unset mode
+unset_main = { fg = "#080c0a", bg = "#2b7a78", bold = true }
+unset_alt = { fg = "#2b7a78" }
+
+[status]
+overall = { fg = "#8fbfa0" }
+
+# Permissions
+perm_type = { fg = "#5cdbda" }
+perm_read = { fg = "#8fbfa0" }
+perm_write = { fg = "#2b7a78" }
+perm_exec = { fg = "#38b2ac" }
+perm_sep = { fg = "#15301b" }
+
+# Progress
+progress_label = { fg = "#38b2ac" }
+progress_normal = { fg = "#38b2ac", bg = "#080c0a" }
+progress_error = { fg = "#38b2ac", bg = "#15301b" }
+
+[which]
+cols = 3
+mask = { bg = "#080c0a" }
+cand = { fg = "#38b2ac", bold = true }
+rest = { fg = "#5cdbda", italic = true }
+desc = { fg = "#2b7a78" }
+separator = " "
+separator_style = { }
+
+[confirm]
+border = { fg = "#15301b" }
+title = { fg = "#38b2ac", bold = true }
+body = { fg = "#8fbfa0", bold = true }
+list = { fg = "#8fbfa0" }
+btn_yes = { fg = "#080c0a", bg = "#38b2ac", bold = true }
+btn_no = { fg = "#8fbfa0", bg = "#080c0a" }
+
+[spot]
+border = { fg = "#15301b" }
+title = { fg = "#38b2ac", bold = true }
+tbl_col = { fg = "#2b7a78" }
+tbl_cell = { fg = "#8fbfa0" }
+
+[notify]
+# Notification title
+title_info = { fg = "#38b2ac" }
+title_warn = { fg = "#5cdbda" }
+title_error = { fg = "#15301b" }
+
+[pick]
+border = { fg = "#15301b", bold = true }
+active = { fg = "#38b2ac" }
+inactive = { fg = "#2b7a78" }
+
+[input]
+border = { fg = "#15301b" }
+title = { fg = "#38b2ac", bold = true }
+value = { fg = "#8fbfa0" }
+selected = { bg = "#38b2ac", fg = "#080c0a" }
+
+[cmp]
+border = { fg = "#15301b", bold = true }
+active = { fg = "#080c0a", bg = "#38b2ac" }
+inactive = { fg = "#2b7a78" }
+
+[tasks]
+border = { fg = "#15301b" }
+title = { fg = "#38b2ac", bold = true }
+hovered = { fg = "#080c0a", bg = "#38b2ac" }
+
+[help]
+on = { fg = "#38b2ac" }
+run = { fg = "#5cdbda" }
+desc = { fg = "#2b7a78", italic = true }
+hovered = { bg = "#38b2ac", fg = "#080c0a" }
+footer = { fg = "#080c0a", bg = "#38b2ac", bold = true }
+
+[filetype]
+rules = [
+  # Empty files
+  { mime = "inode/empty", fg = "#15301b" },
+
+  # Special files
+  { url = "*", is = "orphan", fg = "#15301b" },
+  { url = "*/", is = "orphan", fg = "#15301b" },
+  { url = "*", is = "link", fg = "#5cdbda" },
+  { url = "*/", is = "link", fg = "#5cdbda" },
+  { url = "*", is = "block", fg = "#8fbfa0" },
+  { url = "*", is = "char", fg = "#8fbfa0" },
+  { url = "*", is = "fifo", fg = "#2b7a78" },
+  { url = "*", is = "sock", fg = "#2b7a78" },
+  { url = "*", is = "sticky", fg = "#8fbfa0" },
+  { url = "*", is = "dummy", fg = "#15301b" },
+
+  # Fallback
+  { url = "*/", fg = "#38b2ac" },
+  { url = "*", is = "exec", fg = "#26e664" },
+  { url = "*", fg = "#8fbfa0" }
+]
+
+[icon]
+dirs = [
+  { name = ".config", text = "", fg = "#5cdbda" },
+  { name = ".git", text = "", fg = "#5cdbda" },
+  { name = ".github", text = "", fg = "#5cdbda" },
+  { name = ".npm", text = "", fg = "#5cdbda" },
+  { name = "Desktop", text = "", fg = "#5cdbda" },
+  { name = "Development", text = "", fg = "#5cdbda" },
+  { name = "Documents", text = "", fg = "#5cdbda" },
+  { name = "Downloads", text = "", fg = "#5cdbda" },
+  { name = "Library", text = "", fg = "#5cdbda" },
+  { name = "Movies", text = "", fg = "#5cdbda" },
+  { name = "Music", text = "", fg = "#5cdbda" },
+  { name = "Pictures", text = "", fg = "#5cdbda" },
+  { name = "Public", text = "", fg = "#5cdbda" },
+  { name = "Videos", text = "", fg = "#5cdbda" }
+]
+conds = [
+  # Special files
+  { if = "orphan", text = "", fg = "#15301b" },
+  { if = "link", text = "", fg = "#5cdbda" },
+  { if = "block", text = "", fg = "#8fbfa0" },
+  { if = "char", text = "", fg = "#8fbfa0" },
+  { if = "fifo", text = "", fg = "#2b7a78" },
+  { if = "sock", text = "", fg = "#2b7a78" },
+  { if = "sticky", text = "", fg = "#8fbfa0" },
+  { if = "dummy", text = "", fg = "#15301b" },
+
+  # Fallback
+  { if = "dir", text = "", fg = "#5cdbda" },
+  { if = "exec", text = "", fg = "#26e664" },
+  { if = "!dir", text = "", fg = "#2b7a78" }
+]

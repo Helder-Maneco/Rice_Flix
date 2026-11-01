@@ -1,0 +1,179 @@
+# Color palette: Cybot (Cyberpunk Workshop)
+[app]
+overall = { }
+
+[mgr]
+cwd = { fg = "#00B4D8", bold = true }
+
+# Find
+find_keyword = { fg = "#0E0F16", bg = "#DDA15E", bold = true }
+find_position = { fg = "#00B4D8", bold = true, italic = true }
+
+# Marker
+marker_copied = { fg = "#00B4D8", bg = "#00B4D8" }
+marker_cut = { fg = "#E65C65", bg = "#E65C65" }
+marker_marked = { fg = "#4D5383", bg = "#4D5383" }
+marker_selected = { fg = "#DDA15E", bg = "#DDA15E" }
+
+# Count
+count_copied = { fg = "#00B4D8", bold = true, reversed = true }
+count_cut = { fg = "#E65C65", bold = true, reversed = true }
+count_selected = { fg = "#DDA15E", bold = true, reversed = true }
+
+# Border
+border_symbol = "│"
+border_style = { fg = "#2B2C3B" }
+
+[indicator]
+parent = { underline = true }
+current = { fg = "#DDA15E", bg = "#1A1C28" }
+preview = { underline = true }
+padding = { open = "█", close = "█" }
+
+[tabs]
+active = { fg = "#0E0F16", bg = "#00B4D8", bold = true }
+inactive = { fg = "#4D5383" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[mode]
+# Normal mode
+normal_main = { fg = "#0E0F16", bg = "#00B4D8", bold = true }
+normal_alt = { fg = "#A39FC4" }
+
+# Select mode
+select_main = { fg = "#0E0F16", bg = "#DDA15E", bold = true }
+select_alt = { fg = "#DDA15E" }
+
+# Unset mode
+unset_main = { fg = "#0E0F16", bg = "#E65C65", bold = true }
+unset_alt = { fg = "#E65C65" }
+
+[status]
+overall = { fg = "#A39FC4" }
+
+# Permissions
+perm_type = { fg = "#00B4D8" }
+perm_read = { fg = "#DDA15E" }
+perm_write = { fg = "#A39FC4" }
+perm_exec = { fg = "#7EC7A2" }
+perm_sep = { fg = "#2B2C3B" }
+
+# Progress
+progress_label = { fg = "#00B4D8" }
+progress_normal = { fg = "#00B4D8", bg = "#1A1C28" }
+progress_error = { fg = "#E65C65", bg = "#1A1C28" }
+
+[which]
+cols = 3
+mask = { bg = "#1A1C28" }
+cand = { fg = "#00B4D8", bold = true }
+rest = { fg = "#A39FC4", italic = true }
+desc = { fg = "#4D5383" }
+separator = " "
+separator_style = { }
+
+[confirm]
+border = { fg = "#2B2C3B" }
+title = { fg = "#00B4D8", bold = true }
+body = { fg = "#A39FC4", bold = true }
+list = { fg = "#A39FC4" }
+btn_yes = { fg = "#0E0F16", bg = "#00B4D8", bold = true }
+btn_no = { fg = "#A39FC4", bg = "#1A1C28" }
+
+[spot]
+border = { fg = "#2B2C3B" }
+title = { fg = "#00B4D8", bold = true }
+tbl_col = { fg = "#4D5383" }
+tbl_cell = { fg = "#A39FC4" }
+
+[notify]
+# Notification title
+title_info = { fg = "#00B4D8" }
+title_warn = { fg = "#DDA15E" }
+title_error = { fg = "#E65C65" }
+
+[pick]
+border = { fg = "#2B2C3B", bold = true }
+active = { fg = "#00B4D8" }
+inactive = { fg = "#4D5383" }
+
+[input]
+border = { fg = "#2B2C3B" }
+title = { fg = "#00B4D8", bold = true }
+value = { fg = "#A39FC4" }
+selected = { bg = "#1A1C28" }
+
+[cmp]
+border = { fg = "#2B2C3B", bold = true }
+active = { fg = "#00B4D8", bg = "#1A1C28" }
+inactive = { fg = "#4D5383" }
+
+[tasks]
+border = { fg = "#2B2C3B" }
+title = { fg = "#00B4D8", bold = true }
+hovered = { fg = "#A39FC4", bg = "#1A1C28" }
+
+[help]
+on = { fg = "#DDA15E" }
+run = { fg = "#00B4D8" }
+desc = { fg = "#4D5383", italic = true }
+hovered = { bg = "#1A1C28" }
+footer = { fg = "#0E0F16", bg = "#00B4D8", bold = true }
+
+[filetype]
+rules = [
+  # Empty files
+  { mime = "inode/empty", fg = "#4D5383" },
+
+  # Special files
+  { url = "*", is = "orphan", fg = "#E65C65" },
+  { url = "*/", is = "orphan", fg = "#E65C65" },
+  { url = "*", is = "link", fg = "#00B4D8" },
+  { url = "*/", is = "link", fg = "#00B4D8" },
+  { url = "*", is = "block", fg = "#A39FC4" },
+  { url = "*", is = "char", fg = "#A39FC4" },
+  { url = "*", is = "fifo", fg = "#4D5383" },
+  { url = "*", is = "sock", fg = "#4D5383" },
+  { url = "*", is = "sticky", fg = "#A39FC4" },
+  { url = "*", is = "dummy", fg = "#4D5383" },
+
+  # Fallback
+  { url = "*/", fg = "#3C4159" },
+  { url = "*", is = "exec", fg = "#7EC7A2" },
+  { url = "*", fg = "#A39FC4" }
+]
+
+[icon]
+dirs = [
+  { name = ".config", text = "", fg = "#DDA15E" },
+  { name = ".git", text = "", fg = "#DDA15E" },
+  { name = ".github", text = "", fg = "#DDA15E" },
+  { name = ".npm", text = "", fg = "#DDA15E" },
+  { name = "Desktop", text = "", fg = "#00B4D8" },
+  { name = "Development", text = "", fg = "#00B4D8" },
+  { name = "Documents", text = "", fg = "#A39FC4" },
+  { name = "Downloads", text = "", fg = "#00B4D8" },
+  { name = "Library", text = "", fg = "#A39FC4" },
+  { name = "Movies", text = "", fg = "#DDA15E" },
+  { name = "Music", text = "", fg = "#DDA15E" },
+  { name = "Pictures", text = "", fg = "#00B4D8" },
+  { name = "Public", text = "", fg = "#A39FC4" },
+  { name = "Videos", text = "", fg = "#DDA15E" }
+]
+conds = [
+  # Special files
+  { if = "orphan", text = "", fg = "#E65C65" },
+  { if = "link", text = "", fg = "#00B4D8" },
+  { if = "block", text = "", fg = "#A39FC4" },
+  { if = "char", text = "", fg = "#A39FC4" },
+  { if = "fifo", text = "", fg = "#4D5383" },
+  { if = "sock", text = "", fg = "#4D5383" },
+  { if = "sticky", text = "", fg = "#A39FC4" },
+  { if = "dummy", text = "", fg = "#4D5383" },
+
+  # Fallback
+  { if = "dir", text = "", fg = "#3C4159" },
+  { if = "exec", text = "", fg = "#7EC7A2" },
+  { if = "!dir", text = "", fg = "#4D5383" }
+]
