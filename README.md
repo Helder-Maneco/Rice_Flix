@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌿 Flix — dotfiles
 
 Setup minimalista em **Arch Linux** com **MangoWM** (Wayland), feito para correr leve em hardware modesto e pensado para desenvolvimento **backend**.
@@ -151,3 +152,7 @@ APIs, sistemas robustos e muito terminal.
 ## 📄 Licença
 
 MIT — usa, adapta e partilha à vontade.
+=======
+# Rice_Flix
+🌿 Lightweight Arch Linux dotfiles: MangoWM (Wayland), Waybar, foot, fuzzel, yazi and Neovim. Green theme, runs smooth on a Celeron with 4 GB of RAM.
+>>>>>>> ea413c8ca82c9fd1c31f5a344859d837c93c2e6c
