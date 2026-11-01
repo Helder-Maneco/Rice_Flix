@@ -39,7 +39,7 @@ Tema verde, tudo no teclado, sem peso desnecessário.
 
 ## 🖥️ Hardware
 
-Escolhido de propósito para provar que dá para ter um desktop bonito e rápido sem gastar muito.
+Escolhido de propósito(na verdade este é o meu hardware atual) para provar que dá para ter um desktop bonito e rápido sem gastar muito.
 
 | | |
 | --- | --- |
