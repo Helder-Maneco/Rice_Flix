@@ -78,7 +78,6 @@ Pomodoro, agenda, calendário e TODO num só workspace.
 
 ## 📁 Estrutura
 
-> Ajusta esta secção à estrutura real do repositório.
 
 ```
 .
@@ -102,7 +101,7 @@ Pomodoro, agenda, calendário e TODO num só workspace.
 Pacotes dos repositórios oficiais:
 
 ```bash
-sudo pacman -S foot waybar fuzzel yazi neovim zsh htop calcurse slurp scrcpy
+sudo pacman -S foot waybar fuzzel yazi neovim zsh htop calcurse slurp
 ```
 
 Pacotes do AUR (com o teu helper preferido): **MangoWM**, **Helium** e **LocalSend**.
