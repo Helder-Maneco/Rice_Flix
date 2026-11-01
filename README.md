@@ -55,9 +55,9 @@ Escolhido de propósito para provar que dá para ter um desktop bonito e rápido
 ### Neovim
 Dashboard de arranque e editor lado a lado com o terminal.
 
-| Dashboard | Editor + terminal |
+| Neovim | Editor + terminal |
 | --- | --- |
-| ![Neovim dashboard](assets/screenshots/02-neovim-dashboard.png) | ![Neovim editor](assets/screenshots/03-neovim-editor.png) |
+| ![Neovim](assets/screenshots/02-neovim-dashboard.png) | ![Neovim editor](assets/screenshots/03-neovim-editor.png) |
 
 ### Launcher e monitorização
 
