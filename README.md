@@ -143,7 +143,7 @@ Termina a sessão e inicia o **MangoWM** a partir do TTY ou do teu display manag
 
 **Helder Maneco ("Flix")** — Desenvolvedor Backend, Luanda 🇦🇴
 
-APIs, sistemas robustos e muito terminal.
+
 ---
 
 ## 📄 Licença
