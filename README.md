@@ -1,51 +1,51 @@
 # 🌿 Flix — dotfiles
 
-Setup minimalista em **Arch Linux** com **MangoWM** (Wayland), feito para correr leve em hardware modesto e pensado para desenvolvimento **backend**.
+A minimalist **Arch Linux** setup with **MangoWM** (Wayland), built to run light on modest hardware and designed for **backend** development.
 
-Tema verde, tudo no teclado, sem peso desnecessário.
+Green theme, keyboard-driven, no unnecessary bloat.
 
 ![Desktop](assets/screenshots/01-desktop.png)
 
 ---
 
-## ✨ Destaques
+## ✨ Highlights
 
-- **Leve a sério**: ~840 MiB de RAM em idle, CPU a ~10% e ~43 °C num Celeron com 4 GB de RAM.
-- **Workflow de foco**: pomodoro integrado na barra e num TUI próprio, com agenda e lista de tarefas ao lado.
-- **Tudo em terminal**: editor, ficheiros, agenda, monitorização.
-- **Tema coeso**: o wallpaper, a barra, o terminal e o Neovim partilham a mesma paleta verde.
+- **Seriously lightweight**: ~840 MiB of RAM at idle, ~10% CPU and ~43 °C on a Celeron with 4 GB of RAM.
+- **Focus workflow**: a pomodoro timer in the bar and in its own TUI, with an agenda and a task list beside it.
+- **Everything in the terminal**: editor, files, agenda, system monitoring.
+- **Cohesive theme**: the wallpaper, bar, terminal and Neovim share the same green palette.
 
 ---
 
 ## 🧩 Stack
 
-| Função | Ferramenta |
+| Role | Tool |
 | --- | --- |
-| Sistema | Arch Linux |
+| System | Arch Linux |
 | Compositor / WM | [MangoWM](https://github.com/DreamMaoMao/mangowc) (Wayland) |
-| Barra | Waybar |
+| Bar | Waybar |
 | Terminal | foot |
 | Shell | zsh |
 | Launcher | fuzzel |
 | Editor | Neovim |
-| Ficheiros | yazi |
+| File manager | yazi |
 | Browser | Helium |
-| Agenda / tarefas | calcurse |
-| Monitor de sistema | htop |
-| Captura de ecrã | slurp |
+| Agenda / tasks | calcurse |
+| System monitor | htop |
+| Screenshots | slurp |
 | Extras | scrcpy, LocalSend |
 
 ---
 
 ## 🖥️ Hardware
 
-Escolhido de propósito(na verdade este é o meu hardware atual) para provar que dá para ter um desktop bonito e rápido sem gastar muito.
+This is my actual daily hardware, proof that you can have a beautiful, fast desktop without spending much.
 
 | | |
 | --- | --- |
-| Máquina | Acer Aspire XC-830 |
+| Machine | Acer Aspire XC-830 |
 | CPU | Intel Celeron J4025 (2 cores @ 2.90 GHz) |
-| GPU | Intel UHD Graphics 600 (integrada) |
+| GPU | Intel UHD Graphics 600 (integrated) |
 | RAM | 4 GB |
 
 ---
@@ -53,22 +53,22 @@ Escolhido de propósito(na verdade este é o meu hardware atual) para provar que
 ## 📸 Screenshots
 
 ### Neovim
-Dashboard de arranque e editor lado a lado com o terminal.
+Startup dashboard, and the editor side by side with the terminal.
 
 | Neovim | Editor + terminal |
 | --- | --- |
 | ![Neovim](assets/screenshots/02-neovim-dashboard.png) | ![Neovim editor](assets/screenshots/03-neovim-editor.png) |
 
-### Launcher e monitorização
+### Launcher and monitoring
 
 | fuzzel | htop |
 | --- | --- |
 | ![fuzzel](assets/screenshots/04-fuzzel.png) | ![htop](assets/screenshots/05-htop.png) |
 
-### Foco e produtividade
-Pomodoro, agenda, calendário e TODO num só workspace.
+### Focus and productivity
+Pomodoro, agenda, calendar and TODO in a single workspace.
 
-![Pomodoro e agenda](assets/screenshots/06-pomodoro-calcurse.png)
+![Pomodoro and agenda](assets/screenshots/06-pomodoro-calcurse.png)
 
 ### Browser
 
@@ -76,17 +76,16 @@ Pomodoro, agenda, calendário e TODO num só workspace.
 
 ---
 
-## 📁 Estrutura
-
+## 📁 Structure
 
 ```
 .
-├── mango/        # config do MangoWM
-├── waybar/       # barra e estilos
+├── mango/        # MangoWM config
+├── waybar/       # bar and styles
 ├── foot/         # terminal
 ├── fuzzel/       # launcher
 ├── nvim/         # Neovim
-├── yazi/         # gestor de ficheiros
+├── yazi/         # file manager
 ├── zsh/          # shell
 └── assets/
     └── screenshots/
@@ -94,58 +93,57 @@ Pomodoro, agenda, calendário e TODO num só workspace.
 
 ---
 
-## 🚀 Instalação
+## 🚀 Installation
 
-### 1. Dependências
+### 1. Dependencies
 
-Pacotes dos repositórios oficiais:
+Packages from the official repositories:
 
 ```bash
 sudo pacman -S foot waybar fuzzel yazi neovim zsh htop calcurse slurp
 ```
 
-Pacotes do AUR (com o teu helper preferido): **MangoWM**, **Helium** e **LocalSend**.
+AUR packages (with your preferred helper): **MangoWM**, **Helium** and **LocalSend**.
 
-### 2. Clonar o repositório
+### 2. Clone the repository
 
 ```bash
-git clone https://github.com/<teu-utilizador>/<teu-repo>.git ~/dotfiles
+git clone https://github.com/<your-username>/<your-repo>.git ~/dotfiles
 cd ~/dotfiles
 ```
 
-### 3. Ligar as configurações
+### 3. Link the configs
 
-Usa links simbólicos (à mão ou com [GNU Stow](https://www.gnu.org/software/stow/)):
+Use symlinks (by hand or with [GNU Stow](https://www.gnu.org/software/stow/)):
 
 ```bash
 ln -s ~/dotfiles/waybar ~/.config/waybar
 ln -s ~/dotfiles/foot   ~/.config/foot
-# repete para as restantes pastas
+# repeat for the remaining folders
 ```
 
-Se já tens configs com o mesmo nome, faz backup antes.
+If you already have configs with the same names, back them up first.
 
-### 4. Arrancar
+### 4. Launch
 
-Termina a sessão e inicia o **MangoWM** a partir do TTY ou do teu display manager.
-
----
-
-## 🎯 Notas
-
-- A config foi pensada para **hardware fraco**: sem animações pesadas e sem serviços em segundo plano a mais.
-- Testado em monitor interno e em monitor externo por VGA.
-- Se algo não funcionar na tua máquina, abre uma issue.
+Log out and start **MangoWM** from the TTY or your display manager.
 
 ---
 
-## 👤 Autor
+## 🎯 Notes
 
-**Helder Maneco ("Flix")** — Desenvolvedor Backend, Luanda 🇦🇴
-
+- The config is designed for **low-end hardware**: no heavy animations and no unnecessary background services.
+- Tested on the built-in display and on an external monitor over VGA.
+- If something doesn't work on your machine, open an issue.
 
 ---
 
-## 📄 Licença
+## 👤 Author
 
-MIT — usa, adapta e partilha à vontade.
+**Helder Maneco ("Flix")** — Backend Developer, Luanda 🇦🇴
+
+---
+
+## 📄 License
+
+MIT — use it, adapt it and share it freely.
