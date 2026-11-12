@@ -33,6 +33,7 @@ Green theme, keyboard-driven, no unnecessary bloat.
 | Agenda / tasks | calcurse |
 | System monitor | htop |
 | Screenshots | slurp |
+| Notifications | mako |
 | Extras | scrcpy, LocalSend |
 
 ---
