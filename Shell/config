@@ -1,0 +1,45 @@
+# ~/.config/mako/config
+# Paleta Cabin in the Woods & Turquoise Lake (100% Opaca)
+
+font=JetBrainsMono Nerd Font 16
+
+# Fundo Floresta Escuro (opaco) e Borda Ciano do Lago
+background-color=#080c0aff
+text-color=#8fbfa0ff
+border-color=#38b2acff
+border-size=2
+border-radius=8
+
+width=350
+height=120
+margin=12
+padding=14
+anchor=top-right
+
+default-timeout=4000
+max-visible=5
+sort=-time
+layer=overlay
+
+icons=1
+max-icon-size=48
+
+# Urgência Baixa (Verde Névoa Suave)
+[urgency=low]
+background-color=#080c0aff
+text-color=#8fbfa0ff
+border-color=#15301bff
+
+# Urgência Normal (Ciano do Lago)
+[urgency=normal]
+background-color=#080c0aff
+text-color=#ffffff
+border-color=#38b2acff
+
+# Urgência Crítica (Vermelho Alerta do Telhado)
+[urgency=critical]
+background-color=#080c0aff
+text-color=#ff853aff
+border-color=#f07124ff
+border-size=2
+default-timeout=0
